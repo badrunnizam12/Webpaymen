@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway | DarkNizam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .btn-gradient { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); transition: all 0.3s ease; }
+        .btn-gradient:hover { transform: translateY(-2px); opacity: 0.9; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-md w-full glass rounded-3xl p-8 shadow-2xl">
+        <div class="text-center mb-8">
+            <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                <i class="fa-solid fa-wallet text-3xl text-white"></i>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight">Metode Pembayaran</h1>
+            <p class="text-slate-400 text-sm">Silakan pilih metode pembayaran di bawah ini</p>
+        </div>
+
+        <div class="space-y-4">
+            <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-2xl border border-slate-700">
+                <div class="flex items-center gap-4">
+                    <img src="https://files.catbox.moe/jybtj1.jpg" alt="DANA" class="w-10 h-10 object-contain">
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase font-semibold">DANA</p>
+                        <p class="font-mono font-medium text-blue-400">085126809754</p>
+                    </div>
+                </div>
+                <button onclick="copy('085126809754')" class="text-slate-500 hover:text-white transition-colors">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-2xl border border-slate-700">
+                <div class="flex items-center gap-4">
+                    <img src="https://files.catbox.moe/i1jat6.jpg" alt="GOPAY" class="w-10 h-10 object-contain">
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase font-semibold">GOPAY</p>
+                        <p class="font-mono font-medium text-green-400">085126809754</p>
+                    </div>
+                </div>
+                <button onclick="copy('085126809754')" class="text-slate-500 hover:text-white transition-colors">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+        </div>
+
+        <hr class="my-8 border-slate-700">
+
+        <div class="grid grid-cols-2 gap-4">
+            <a href="https://t.me/darknizam" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 hover:bg-sky-500 hover:text-white transition-all">
+                <i class="fa-brands fa-telegram text-xl"></i>
+                <span class="text-sm font-medium">Telegram</span>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbBsANr30LKU8Vh7UK2P" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500 hover:text-white transition-all">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span class="text-sm font-medium">Saluran WA</span>
+            </a>
+        </div>
+
+        <p class="text-center mt-8 text-[10px] text-slate-500 uppercase tracking-widest leading-relaxed">
+            Harap kirim bukti transfer ke Telegram setelah melakukan pembayaran
+        </p>
+    </div>
+
+    <script>
+        function copy(text) {
+            navigator.clipboard.writeText(text);
+            alert("Nomor berhasil disalin: " + text);
+        }
+    </script>
+</body>
+</html>
